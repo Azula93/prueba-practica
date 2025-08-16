@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600; 
+}
+
+p,
+li,
+a,
+span {
+  font-weight: 400; 
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: #002d72;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  height: 100px;
+  /* font-size: 80px; */
+}
+
+.logo_main {
+  filter: brightness(0) invert(1);
+}
+
+.navbar {
+  background-color: #002d72 !important; /* Azul Epson */
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  cursor: pointer; /* cursor en todos los links */
+  transition: all 0.3s ease; /* suaviza el hover */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #002d72 !important;
+  background-color: #fff !important;
+  transform: scale(1.05); /* pequeño zoom al pasar */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url("assets/BANNER_EPSON-02.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Overlay oscuro semitransparente */
+}
+
+.subtitulo {
+  background-color: #002d72;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.slider-title {
+  color: #002d72;
+}
+
+.section {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  gap: 40px;
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+  background-color: #f9f9f9;
+}
+
+.section > img {
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel .carousel-item img {
+  max-width: 100%;
+}
+
+.section .text {
+  max-width: 500px;
+}
+
+.section .text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #002d72;
+}
+
+.section .text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.btn-vermas {
+  background-color: #002d72;
+  border: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-vermas:hover {
+  background-color: #0d1a6d;
+  color: #ffffff;
+}
+
+.btn-vermas:focus,
+.btn-vermas:active {
+  background-color: #0b165a;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(16, 33, 139, 0.3);
+}
+
+footer {
+  background-color: #002d72;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* --- ESTILOS RESPONSIVE --- */
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    justify-content: center; 
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    header img {
+        height: 70px; 
+    }
+
+      .section .text h2 {
+    font-size: 24px;
+  }
+  .section .text p {
+    font-size: 16px;
+  }
+
+    .banner {
+        height: 35vh; 
+        min-height: 250px; 
+        background-image: url("assets/BANNER_EPSON-02mobile.jpg");
+        background-attachment: scroll; 
+         background-position: right center; 
+         position: relative;
+    }
+
+    .section {
+       display: block;
+        padding: 20px 5%; 
+    }
+
+    .slider-title {
+        font-size: 1.75rem; 
+    }
+}
+
+
